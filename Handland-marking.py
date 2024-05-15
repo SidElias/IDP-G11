@@ -12,9 +12,7 @@ while True:
     results=hands.process(image)
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
-            mp_drawing.draw_landmarks(
-                image,
-                hand_landmarks,mphands.HAND_CONNECTIONS)
+            mp_drawing.draw_landmarks(image, hand_landmarks,mphands.HAND_CONNECTIONS)
     cv2.imshow('Handtracker',image)
-    cv2,waitKey(1)
+    cv2.waitKey(1)
             
