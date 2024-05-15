@@ -8,7 +8,7 @@ cap=cv2.VideoCapture(0)
 hands=mphands.Hands()
 while True:
     data,image=cap.read()
-    image in cv2.cvtColor(cv2.flip(image,1))
+    image = cv2.flip(image,1)
     results=hands.process(image)
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
